@@ -1,6 +1,6 @@
 package br.com.jawc;
 
-public class HelloWorld{
+public class Ambiente{
 
     public static void main(String[] args){
         String ambiente = args[0];
