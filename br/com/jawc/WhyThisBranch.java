@@ -1,3 +1,5 @@
+package br.com.jawc;
+
 public class WhyThisBranch {
 
     public static void main(String[]args){
