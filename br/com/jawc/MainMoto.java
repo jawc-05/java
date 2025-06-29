@@ -3,7 +3,7 @@
  */
 package br.com.jawc;
 
-public class Main {
+public class MainMoto {
 
     public static void main(String[] args) {
 

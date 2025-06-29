@@ -1,7 +1,7 @@
 /**
  * @author jawc
  */
-package br.com.jawc;
+package br.com.jawc.wrappers;
 
 public class Wrappers {
 
