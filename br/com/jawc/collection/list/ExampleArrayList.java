@@ -19,6 +19,16 @@ public class ExampleArrayList {
     public static void main(String[] args) {
         exemploListaSimples();
         exemploListaSimplesOrdemAscendente();
+        exemploNumeros();
+    }
+
+    private static void exemploNumeros() {
+        System.out.println("*****exemploNumeros*****");
+        List<Integer> numeros = new ArrayList<>();
+        numeros.add(1);
+        numeros.add(3);
+        numeros.add(5);
+        System.out.println(numeros);
     }
 
     private static void exemploListaSimples(){
