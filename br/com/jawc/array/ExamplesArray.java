@@ -12,6 +12,7 @@ public class ExamplesArray {
         tamanhoArray();
         percorrendoArray1();
         percorrendoArray2();
+        arrayBidimensional();
     }
 
     private static void declararArray(){
@@ -85,5 +86,14 @@ public class ExamplesArray {
 
         System.out.println("Valores no array2 passados na linha são");
         outputArray(array2);
+    }
+
+    private static void outputArray(int[][] array){
+        for (int linha = 0; linha < array.length; linha++){
+            for (int coluna = 0; coluna < array[linha].length; coluna++){
+                System.out.printf("%d ", array[linha][coluna]);
+            }
+            System.out.println();
+        }
     }
 }
