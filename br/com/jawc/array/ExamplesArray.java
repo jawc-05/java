@@ -7,8 +7,11 @@ package br.com.jawc.array;
 public class ExamplesArray {
 
     public static void main(String[] args) {
+
         declararArray();
+        tamanhoArray();
     }
+
     private static void declararArray(){
         System.out.println("*****declaraçãoArray*****");
         int [] a = new int[4];
@@ -35,5 +38,18 @@ public class ExamplesArray {
 
         System.out.println(meuArray[0]);
         System.out.println(meuArray[9]);
+    }
+
+    public static void tamanhoArray(){
+        System.out.println("*****tamanhoArray*****");
+        int [] arrayUm = {1,2,3,8,345,2123,4,325,25,};
+        int [] arrayDois = {4,5,6,7,4,122435};
+
+        if (arrayDois.length > 8){
+            System.out.println("Tamanho do ArrayDois: Maior que 8!");
+        }else{
+            System.out.println("Tamanho do ArrayDois: Menor ou Igual a 8!");
+        }
+        System.out.println("Tamanho do ArrayUm: "+arrayUm.length);
     }
 }
