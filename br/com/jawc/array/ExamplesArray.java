@@ -11,6 +11,7 @@ public class ExamplesArray {
         declararArray();
         tamanhoArray();
         percorrendoArray1();
+        percorrendoArray2();
     }
 
     private static void declararArray(){
@@ -64,5 +65,13 @@ public class ExamplesArray {
         }
 
         System.out.println("Total da Array: "+total);
+    }
+
+    public static void percorrendoArray2(){
+        System.out.println("*****percorrendoArray2*****");
+        int [] array2 = {1,2,3,8,345,2123,4};
+        for ( int i = 0; i < array2.length; i++){
+            System.out.println(array2[i]);
+        }
     }
 }
