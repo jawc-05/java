@@ -39,5 +39,12 @@ public class ExampleBubbleSortDynamic {
         }
     }
 
+    private static int[] convert(String[] vetStr){
+        int[] numbers = new int[vetStr.length];
+        for(int i = 0; i < vetStr.length; i++){
+            numbers[i] = Integer.parseInt(vetStr[i]);
+        }
+        return numbers;
+    }
 
 }
