@@ -10,6 +10,7 @@ public class ExamplesArray {
 
         declararArray();
         tamanhoArray();
+        percorrendoArray1();
     }
 
     private static void declararArray(){
@@ -51,5 +52,17 @@ public class ExamplesArray {
             System.out.println("Tamanho do ArrayDois: Menor ou Igual a 8!");
         }
         System.out.println("Tamanho do ArrayUm: "+arrayUm.length);
+    }
+
+    public static void percorrendoArray1(){
+        System.out.println("*****percorrendoArray1*****");
+        int [] array1 = {1,2,3,8,345,2123,4};
+        int total = 0;
+
+        for (int i : array1){
+            total += i;
+        }
+
+        System.out.println("Total da Array: "+total);
     }
 }
