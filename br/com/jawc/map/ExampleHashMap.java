@@ -1,6 +1,12 @@
 /**
  * @author jawc
- */
+ * *
+ *  * Permite chaves e valores null. Não existe garantia que os dados ficarão ordenados.
+ *  *
+ *  * Para usar uma classe que implementa Map, quaisquer classes que forem utilizadas como chave
+ *  * devem sobrescrever os métodos hashCode() e equals().
+ *  */
+
 
 package br.com.jawc.map;
 
