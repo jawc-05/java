@@ -5,7 +5,9 @@
 package br.com.jawc.map;
 
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.Map;
+import java.util.Set;
 
 public class ExampleHashMap {
 
@@ -13,7 +15,46 @@ public class ExampleHashMap {
         exemploListaSimples();
         exemploListaSimplesIterandoValores();
         exemploListaSimplesIterandoChaves();
+        exemploListaSimplesIterandoChaveValor();
+    }
 
+    private static void exemploListaSimplesIterandoChaveValor() {
+        System.out.println("***** exemploListaSimplesIterandoChaveValor *****");
+        Map<Integer, String> lista = new HashMap<>();
+        lista.put(1, "João da Silva");
+        lista.put(2, "Antonio Sousa");
+        lista.put(4, "Maria Sousa");
+        lista.put(3, "Lúcia Ferreira");
+
+        System.out.println("***** for comum *****");
+        Set<Map.Entry<Integer, String>> entry = lista.entrySet();
+        for (Map.Entry<Integer, String> e : entry){
+            System.out.println("Chave: " + e.getKey());
+            System.out.println("Valor: " + e.getValue());
+        }
+
+        System.out.println("***** forEach stream *****");
+        lista.entrySet().forEach(e -> {
+            System.out.println("Chave: " + e.getKey());
+            System.out.println("Valor: " + e.getValue());
+        });
+
+        System.out.println("***** forEach stream1 *****");
+        lista.keySet().stream().forEach(System.out::println);
+
+        System.out.println("***** forEach stream2 *****");
+        lista.values().stream().forEach(System.out::println);
+
+        System.out.println("***** forEach stream3 *****");
+        lista.forEach((key, value) -> System.out.println(key+ " " + value));
+
+        System.out.println("***** iterator *****");
+        Iterator<Map.Entry<Integer, String>> it = lista.entrySet().iterator();
+        while(it.hasNext()){
+            Map.Entry<Integer, String> entry1 = it.next();
+            System.out.println("Chave: " + entry1.getKey());
+            System.out.println("Valor: " + entry1.getValue());
+        }
     }
 
     private static void exemploListaSimplesIterandoChaves() {
