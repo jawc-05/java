@@ -34,8 +34,9 @@ public class Tarefa2 {
                 System.out.println("Nomes de Homens:");
                 System.out.println(mapa.get("M"));
             } else if (sexo.equals("F")) {
-            System.out.println("Nomes de Mulheres:");
-            System.out.println(mapa.get("F"));
+                System.out.println("Nomes de Mulheres:");
+                System.out.println(mapa.get("F"));
+            }
         }
     }
-}}
+}
