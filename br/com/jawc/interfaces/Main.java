@@ -19,6 +19,14 @@ public class Main {
         ICaneta lapis = new Lapis();
         lapis.escrever("Olá João");
         lapis.escreverComumATodas();
-        System.out.println(lapis.getCor());
+
+
+        ICarro carro = new CarroPasseio();
+        carro.andar();
+        carro.parar();
+
+        ICarro caminhao = new Caminhão();
+        caminhao.andar();
+        caminhao.parar();
     }
 }
