@@ -9,6 +9,6 @@ public class Assalariado extends Empregado {
 
     @Override
     public Double vencimento() {
-        return 0.0;
+        return salario;
     }
 }

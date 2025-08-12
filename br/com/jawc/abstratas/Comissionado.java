@@ -9,6 +9,6 @@ public class Comissionado extends Empregado {
 
     @Override
     public Double vencimento() {
-        return 0.0;
+        return totalVenda*totalComissao;
     }
 }
