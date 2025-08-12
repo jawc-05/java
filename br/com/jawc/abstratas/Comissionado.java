@@ -6,4 +6,9 @@ package br.com.jawc.abstratas;
 public class Comissionado extends Empregado {
     private Double totalVenda;
     private Double totalComissao;
+
+    @Override
+    public Double vencimento() {
+        return 0.0;
+    }
 }

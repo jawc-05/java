@@ -8,5 +8,7 @@ public  abstract class Empregado {
     private String sobrenome;
     private String cpf;
 
+    public  abstract Double vencimento();
+
 
 }
