@@ -41,10 +41,15 @@ public class Venda {
     }
 
     public void concretizarVenda(){
-
+        System.out.println("Comprador: " + this.comprador.getNome());
+        System.out.println("Comprou os itens: " );
+        for (Produto prod : this.produtos) {
+            System.out.println("Nome produto " + prod.getNome() + " Valor produto " + prod.getPreco());
+        }
+        System.out.println("Vendedor: " +  this.vendedor.getNome() );
     }
 
     public void cancelarVenda(){
-
+        System.out.println("Venda cancelada" );
     }
 }

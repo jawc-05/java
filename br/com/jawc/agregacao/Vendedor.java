@@ -6,14 +6,22 @@ package br.com.jawc.agregacao;
 public class Vendedor {
 
     private String nome;
-    private Double commisao;
+    private Double comissao;
 
-    public Double getCommisao() {
-        return commisao;
+    public String getNome() {
+        return nome;
     }
 
-    public void setCommisao(Double commisao) {
-        this.commisao = commisao;
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public Double getComissao() {
+        return comissao;
+    }
+
+    public void setComissao(Double comissao) {
+        this.comissao = comissao;
     }
 
     public void vende(){
