@@ -6,7 +6,15 @@ package br.com.jawc.agregacao;
 public class Comprador {
     private Double verba;
 
-    public void comprar(){
+    public Double getVerba() {
+        return verba;
+    }
 
+    public void setVerba(Double verba) {
+        this.verba = verba;
+    }
+
+    public void comprar(){
+        System.out.println("Comprar");
     }
 }
