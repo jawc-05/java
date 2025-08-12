@@ -12,7 +12,7 @@ public class Programa {
         empregado.setNome("Jawc");
         empregado.setSobrenome("Cunha");
         empregado.setSalario(100d);
-        System.out.println(empregado.getNome() + " "+ empregado.getSobrenome() + " tem um salário de: " + empregado.vencimento());
+        imprimir(empregado);
 
         Comissionado comissionado = new Comissionado();
         comissionado.setCpf("2222222");
@@ -20,7 +20,7 @@ public class Programa {
         comissionado.setSobrenome("Cunha2");
         comissionado.setTotalVenda(1000d);
         comissionado.setTotalComissao(0.1d);
-        System.out.println(comissionado.getNome() + " " + comissionado.getSobrenome() + " Tem um salário de: " + comissionado.vencimento());
+        imprimir(comissionado);
 
         Horista horista = new Horista();
         horista.setCpf("33333");
@@ -28,6 +28,10 @@ public class Programa {
         horista.setSobrenome("Cunha3");
         horista.setHoraTrabalhada(8d);
         horista.setPrecoHora(80d);
-        System.out.println(horista.getNome() + " " + horista.getSobrenome() + " Tem um salário de: " + horista.vencimento());
+        imprimir(horista);
+    }
+
+    public static void imprimir(Empregado funcionario){
+        System.out.println(funcionario.getNome() + " " + funcionario.getSobrenome() + " Tem um salário de: " + funcionario.vencimento());
     }
 }
