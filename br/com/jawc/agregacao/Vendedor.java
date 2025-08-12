@@ -4,6 +4,8 @@
 package br.com.jawc.agregacao;
 
 public class Vendedor {
+
+    private String nome;
     private Double commisao;
 
     public Double getCommisao() {
