@@ -1,0 +1,12 @@
+/**
+ * @author jawc
+ */
+package br.com.jawc.abstratas;
+
+public  abstract class Empregado {
+    private String nome;
+    private String sobrenome;
+    private String cpf;
+
+
+}
