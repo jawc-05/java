@@ -52,4 +52,13 @@ public class Venda {
     public void cancelarVenda(){
         System.out.println("Venda cancelada" );
     }
+
+    @Override
+    public String toString() {
+        return "Venda{" +
+                "comprador=" + comprador.getNome() +
+                ", vendedor=" + vendedor.getNome() +
+                ", produtos=" + produtos +
+                '}';
+    }
 }

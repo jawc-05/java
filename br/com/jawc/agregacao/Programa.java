@@ -21,6 +21,11 @@ public class Programa{
         venda.add(produtoCell);
 
         venda.concretizarVenda();
+        System.out.println(venda);
+        venda.cancelarVenda();
+        venda=null;
+        System.out.println(venda);
+
     }
 
     private static Comprador criarComprador(String nome, double verba) {
