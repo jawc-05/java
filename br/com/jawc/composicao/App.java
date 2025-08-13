@@ -17,5 +17,8 @@ public class App {
         ContaPoupanca cp = new ContaPoupanca();
         cp.setBanco(banco);
         cp.setSaldo(10d);
+
+        banco.add(cc);
+        banco.add(cp);
     }
 }
