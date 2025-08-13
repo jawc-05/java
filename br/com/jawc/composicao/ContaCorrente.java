@@ -5,6 +5,7 @@ package br.com.jawc.composicao;
 
 public class ContaCorrente {
 
+    private Banco banco;
     private Double saldo;
     private  Double chequeEspecial;
 
@@ -22,5 +23,13 @@ public class ContaCorrente {
 
     public void setChequeEspecial(Double chequeEspecial) {
         this.chequeEspecial = chequeEspecial;
+    }
+
+    public Banco getBanco() {
+        return banco;
+    }
+
+    public void setBanco(Banco banco) {
+        this.banco = banco;
     }
 }
