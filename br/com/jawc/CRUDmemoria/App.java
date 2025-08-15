@@ -19,7 +19,7 @@ public class App {
 
         String opcao = JOptionPane.showInputDialog(null,
                 "Digite 1 para cadastro, 2 para consultar, 3 para exclusão, 4 para alteração ou 5 para sair",
-                "Cadastro", JOptionPane.PLAIN_MESSAGE);
+                "Cadastro", JOptionPane.INFORMATION_MESSAGE);
 
         while (!isOpcaoValida(opcao)) {
             if("".equals(opcao)) {
@@ -30,15 +30,57 @@ public class App {
                     "Cadastro", JOptionPane.ERROR_MESSAGE);
         }
 
-        if (isOpcaoCadastro(opcao)) {
-            JOptionPane.showMessageDialog(null, "Opção: " + opcao, "ERRO",JOptionPane.ERROR_MESSAGE);
+        while (isOpcaoValida(opcao)) {
 
+            if (isOpcaoSair(opcao)){
+                sair();
+            }else if (isOpcaoCadastro(opcao)){
+                String dados = JOptionPane.showInputDialog(null,
+                        "Digite os dados do cliente separados por vírgula, conforme exemplo: Nome, CPF, Telefone, Endereço, Número, Cidade e Estado",
+                        "Cadastro", JOptionPane.INFORMATION_MESSAGE);
+                cadastrar(dados);
+            }else if (isOpcaoConsulta(opcao)){
+
+            }else if (isOpcaoExcluir(opcao)){
+
+            }else if (isOpcaoAlterar(opcao)){
+
+            }
         }
 
     }
 
-    private static void sair() {
+    private static void cadastrar(String dados) {
+        String[] dadosSeparados = dados.split(",");
+        //TentarValidar se todos os campos estao preenchidos
+        Cliente cliente = new Cliente(dadosSeparados[0],dadosSeparados[1],dadosSeparados[2],dadosSeparados[3],dadosSeparados[4],dadosSeparados[5],dadosSeparados[6]);
 
+    }
+
+    private static boolean isOpcaoAlterar(String opcao) {
+        if ("4".equals(opcao)) {
+            return true;
+        }
+        return false;
+    }
+
+    private static boolean isOpcaoExcluir(String opcao) {
+        if ("3".equals(opcao)) {
+            return true;
+        }
+        return false;
+    }
+
+    private static boolean isOpcaoConsulta(String opcao) {
+        if ("2".equals(opcao)) {
+            return true;
+        }
+        return false;
+    }
+
+    private static void sair() {
+        JOptionPane.showMessageDialog(null, "Até logo", "Sair",JOptionPane.PLAIN_MESSAGE);
+        System.exit(0);
     }
 
     private static boolean isOpcaoValida(String opcao) {
