@@ -31,7 +31,6 @@ public class App {
         }
 
         while (isOpcaoValida(opcao)) {
-
             if (isOpcaoSair(opcao)){
                 sair();
             }else if (isOpcaoCadastro(opcao)){
@@ -42,22 +41,28 @@ public class App {
             }else if (isOpcaoConsulta(opcao)){
                 String dados = JOptionPane.showInputDialog(null,
                         "Digite o CPF", "Consulta", JOptionPane.INFORMATION_MESSAGE);
-                consultar(dados);
+                buscar(dados);
             }else if (isOpcaoExcluir(opcao)){
 
             }else if (isOpcaoAlterar(opcao)){
 
             }
+            opcao = JOptionPane.showInputDialog(null,
+                    "Opção inválida digite 1 para cadastro, 2 para consulta, 3 para exclusão, 4 para alterar e 5 para sair",
+                    "Cadastro", JOptionPane.ERROR_MESSAGE);
+
         }
 
     }
 
-    private static void consultar(String dados) {
+    private static void buscar(String dados) {
         //Validar se foi passado somente o CPF
-        Cliente cliente = IClienteDAO.consultar(Long.parseLong(dados));
-        JOptionPane.showMessageDialog(null,"Cliente encontrado: " + cliente.toString(),  "Sucesso",  JOptionPane.INFORMATION_MESSAGE);
-
-
+        Cliente cliente = IClienteDAO.buscar(Long.parseLong(dados));
+        if (cliente != null) {
+            JOptionPane.showMessageDialog(null,"Cliente encontrado: " + cliente.toString(),  "Sucesso",  JOptionPane.INFORMATION_MESSAGE);
+        }else{
+            JOptionPane.showMessageDialog(null,"Cliente não encontrado" , "Erro",  JOptionPane.ERROR_MESSAGE);
+        }
     }
 
     private static void cadastrar(String dados) {
