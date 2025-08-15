@@ -40,7 +40,9 @@ public class App {
                         "Cadastro", JOptionPane.INFORMATION_MESSAGE);
                 cadastrar(dados);
             }else if (isOpcaoConsulta(opcao)){
-
+                String dados = JOptionPane.showInputDialog(null,
+                        "Digite o CPF", "Consulta", JOptionPane.INFORMATION_MESSAGE);
+                consultar(dados);
             }else if (isOpcaoExcluir(opcao)){
 
             }else if (isOpcaoAlterar(opcao)){
@@ -48,6 +50,10 @@ public class App {
             }
         }
 
+    }
+
+    private static void consultar(String dados) {
+        IClienteDAO.consultar(Long.parseLong(dados));
     }
 
     private static void cadastrar(String dados) {
