@@ -53,7 +53,16 @@ public class App {
     private static void cadastrar(String dados) {
         String[] dadosSeparados = dados.split(",");
         //TentarValidar se todos os campos estao preenchidos
+        //Se não tiver, passar null no construtor onde o valor é nulo
+
         Cliente cliente = new Cliente(dadosSeparados[0],dadosSeparados[1],dadosSeparados[2],dadosSeparados[3],dadosSeparados[4],dadosSeparados[5],dadosSeparados[6]);
+        Boolean isCadastrado =  IClienteDAO.cadastrar(cliente);
+        if (isCadastrado){
+            JOptionPane.showMessageDialog(null,"Cliente cadastrado com sucesso", "Sucesso",  JOptionPane.INFORMATION_MESSAGE);
+        }
+        else{
+            JOptionPane.showMessageDialog(null,"Cliente já se encontra cadastrado", "Erro",   JOptionPane.ERROR_MESSAGE);
+        }
 
     }
 
