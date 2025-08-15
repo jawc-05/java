@@ -53,7 +53,11 @@ public class App {
     }
 
     private static void consultar(String dados) {
-        IClienteDAO.consultar(Long.parseLong(dados));
+        //Validar se foi passado somente o CPF
+        Cliente cliente = IClienteDAO.consultar(Long.parseLong(dados));
+        JOptionPane.showMessageDialog(null,"Cliente encontrado: " + cliente.toString(),  "Sucesso",  JOptionPane.INFORMATION_MESSAGE);
+
+
     }
 
     private static void cadastrar(String dados) {
