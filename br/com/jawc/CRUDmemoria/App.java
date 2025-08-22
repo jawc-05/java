@@ -44,7 +44,7 @@ public class App {
                 buscar(dados);
             }else if (isOpcaoExcluir(opcao)){
                 String dados = JOptionPane.showInputDialog(null,
-                        "Digite o CPF do usuário que deseja excluir", "Excluisão", JOptionPane.INFORMATION_MESSAGE);
+                        "Digite o CPF do usuário que deseja excluir", "Exclusão", JOptionPane.INFORMATION_MESSAGE);
                 excluir(dados);
             }else if (isOpcaoAlterar(opcao)){
 
