@@ -47,6 +47,9 @@ public class App {
                         "Digite o CPF do usuário que deseja excluir", "Exclusão", JOptionPane.INFORMATION_MESSAGE);
                 excluir(dados);
             }else if (isOpcaoAlterar(opcao)){
+                String dados = JOptionPane.showInputDialog(null,
+                        "Digite o CPF do usuário que deseja alterar", "Alteração",  JOptionPane.INFORMATION_MESSAGE);
+                alterar(dados);
 
             }
             opcao = JOptionPane.showInputDialog(null,
@@ -54,6 +57,10 @@ public class App {
                     "Cadastro", JOptionPane.INFORMATION_MESSAGE);
 
         }
+
+    }
+
+    private static void alterar(String dados) {
 
     }
 
