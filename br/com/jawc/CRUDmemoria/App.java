@@ -48,7 +48,7 @@ public class App {
                 excluir(dados);
             }else if (isOpcaoAlterar(opcao)){
                 String dados = JOptionPane.showInputDialog(null,
-                        "Digite o CPF do usuário que deseja alterar", "Alteração",  JOptionPane.INFORMATION_MESSAGE);
+                        "Digite os dados do cliente separados por vígula, conforme exemplo: Nome, CPF, Telefone, Endereço, Número, Cidade e Estado", "Alteração",  JOptionPane.INFORMATION_MESSAGE);
                 alterar(dados);
 
             }
@@ -61,7 +61,9 @@ public class App {
     }
 
     private static void alterar(String dados) {
-
+        String[] dadosSeparados = dados.split(",");
+        Cliente cliente = new Cliente(dadosSeparados[0], dadosSeparados[1], dadosSeparados[2], dadosSeparados[3], dadosSeparados[4], dadosSeparados[5], dadosSeparados[6]);
+        IClienteDAO.alterar(cliente);
     }
 
     private static void excluir(String dados) {
