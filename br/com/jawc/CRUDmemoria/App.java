@@ -43,7 +43,9 @@ public class App {
                         "Digite o CPF", "Consulta", JOptionPane.INFORMATION_MESSAGE);
                 buscar(dados);
             }else if (isOpcaoExcluir(opcao)){
-
+                String dados = JOptionPane.showInputDialog(null,
+                        "Digite o CPF do usuário que deseja excluir", "Excluisão", JOptionPane.ERROR_MESSAGE);
+                excluir(dados);
             }else if (isOpcaoAlterar(opcao)){
 
             }
@@ -53,6 +55,11 @@ public class App {
 
         }
 
+    }
+
+    private static void excluir(String dados) {
+        IClienteDAO.excluir(Long.parseLong(dados));
+        JOptionPane.showMessageDialog(null, "Cliente excluido com sucesso", "Exclusão",  JOptionPane.INFORMATION_MESSAGE);
     }
 
     private static void buscar(String dados) {
