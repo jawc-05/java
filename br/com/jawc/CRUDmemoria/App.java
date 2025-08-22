@@ -119,7 +119,12 @@ public class App {
     }
 
     private static void sair() {
-        JOptionPane.showMessageDialog(null, "Até logo", "Sair",JOptionPane.PLAIN_MESSAGE);
+        String clientesCadastrados = "";
+        for (Cliente cliente : IClienteDAO.listar()) {
+            clientesCadastrados += cliente.toString() + "\n";
+        }
+
+        JOptionPane.showMessageDialog(null, "Clientes cadastrados: " + clientesCadastrados, "Até logo",JOptionPane.INFORMATION_MESSAGE);
         System.exit(0);
     }
 
