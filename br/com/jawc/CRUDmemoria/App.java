@@ -27,7 +27,7 @@ public class App {
             }
             opcao = JOptionPane.showInputDialog(null,
                     "Opção inválida digite 1 para cadastro, 2 para consulta, 3 para exclusão, 4 para alterar e 5 para sair",
-                    "Cadastro", JOptionPane.ERROR_MESSAGE);
+                    "Cadastro", JOptionPane.INFORMATION_MESSAGE);
         }
 
         while (isOpcaoValida(opcao)) {
@@ -44,14 +44,14 @@ public class App {
                 buscar(dados);
             }else if (isOpcaoExcluir(opcao)){
                 String dados = JOptionPane.showInputDialog(null,
-                        "Digite o CPF do usuário que deseja excluir", "Excluisão", JOptionPane.ERROR_MESSAGE);
+                        "Digite o CPF do usuário que deseja excluir", "Excluisão", JOptionPane.INFORMATION_MESSAGE);
                 excluir(dados);
             }else if (isOpcaoAlterar(opcao)){
 
             }
             opcao = JOptionPane.showInputDialog(null,
                     "Opção inválida digite 1 para cadastro, 2 para consulta, 3 para exclusão, 4 para alterar e 5 para sair",
-                    "Cadastro", JOptionPane.ERROR_MESSAGE);
+                    "Cadastro", JOptionPane.INFORMATION_MESSAGE);
 
         }
 
@@ -68,7 +68,7 @@ public class App {
         if (cliente != null) {
             JOptionPane.showMessageDialog(null,"Cliente encontrado: " + cliente.toString(),  "Sucesso",  JOptionPane.INFORMATION_MESSAGE);
         }else{
-            JOptionPane.showMessageDialog(null,"Cliente não encontrado" , "Erro",  JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(null,"Cliente não encontrado" , "Erro",  JOptionPane.INFORMATION_MESSAGE);
         }
     }
 
@@ -83,7 +83,7 @@ public class App {
             JOptionPane.showMessageDialog(null,"Cliente cadastrado com sucesso", "Sucesso",  JOptionPane.INFORMATION_MESSAGE);
         }
         else{
-            JOptionPane.showMessageDialog(null,"Cliente já se encontra cadastrado", "Erro",   JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(null,"Cliente já se encontra cadastrado", "Erro",   JOptionPane.INFORMATION_MESSAGE);
         }
 
     }
