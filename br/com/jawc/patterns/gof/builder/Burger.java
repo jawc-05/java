@@ -33,7 +33,7 @@ public class Burger {
 
     public void print(){
         System.out.println(
-                "Burger is finished! " + "n" +
+                "Burger is finished! " + "\n" +
                         "Bun: " + bun +
                         " - Meat: " + meat +
                         " - Cheese: " + cheese +
