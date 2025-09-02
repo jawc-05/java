@@ -4,6 +4,7 @@
 package br.com.jawc.patterns.gof.abstractFactory;
 
 public class CompanyCarFactory extends Factory{
+
     @Override
     Car retrieveCar(String requestGrade) {
         switch (requestGrade) {
