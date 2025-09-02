@@ -10,7 +10,7 @@ public class CarFactory extends Factory {
     Car retrieveCar(String requestGrade) {
         switch (requestGrade) {
             case "A":
-                return new Volkswagem(175, "full", "blue");
+                return new Volkswagen(175, "full", "blue");
             case "B":
                 return new Toyota(435, "full", "blue");
             default:
