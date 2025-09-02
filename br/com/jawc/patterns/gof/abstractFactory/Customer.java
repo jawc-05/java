@@ -1,7 +1,7 @@
 /**
  * @author jawc
  */
-package br.com.jawc.patterns.gof.factory;
+package br.com.jawc.patterns.gof.abstractFactory;
 
 public class Customer {
 

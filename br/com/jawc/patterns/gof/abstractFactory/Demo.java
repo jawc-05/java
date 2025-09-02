@@ -2,7 +2,7 @@
  * @author jawc
  */
 
-package br.com.jawc.patterns.gof.factory;
+package br.com.jawc.patterns.gof.abstractFactory;
 
 public class Demo {
     public static void main(String[] args) {
