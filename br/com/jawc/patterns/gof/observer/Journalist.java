@@ -4,10 +4,11 @@
 package br.com.jawc.patterns.gof.observer;
 
 import java.util.ArrayList;
+import java.util.List;
 
-public class Journalist implements Observer {
+public class Journalist implements Subject {
 
-    private ArrayList<Observer> observers = new ArrayList<>();
+    private List<Observer> observers = new ArrayList<>();
     private String title, summary, image, text;
 
     public ArrayList<Observer> getObservers() {
@@ -50,8 +51,38 @@ public class Journalist implements Observer {
         this.text = text;
     }
 
-    @Override
-    public void update(Subject subject) {
+    public void publish(String title, String summary, String image, String text) {
+        this.title = title;
+        this.summary = summary;
+        this.image = image;
+        this.text = text;
+        notifyObserver();
+    }
 
+
+    @Override
+    public void registerObserver(java.util.Observer observer) {
+        observers.add(observer);
+    }
+
+    @Override
+    public void removeObserver(java.util.Observer observer) {
+        observers.remove(observer);
+    }
+
+    @Override
+    public void notifyObserver() {
+        observers.forEach(observer -> observer.update(this));
+    }
+
+    @Override
+    public String toString() {
+        return "Journalist{" +
+                "observers=" + observers +
+                ", title='" + title + '\'' +
+                ", summary='" + summary + '\'' +
+                ", image='" + image + '\'' +
+                ", text='" + text + '\'' +
+                '}';
     }
 }
