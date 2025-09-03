@@ -11,7 +11,7 @@ public abstract class Worker {
         eatBreakfast();
         goingToWork();
         working();
-
+        goingToWork();
     }
 
     protected abstract void working();
@@ -20,7 +20,7 @@ public abstract class Worker {
         System.out.println("Starting routine");
     }
 
-    private void getUp(){
+    protected void getUp(){
         System.out.println("Getting up from bed");
     }
 
