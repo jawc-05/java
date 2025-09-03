@@ -21,7 +21,7 @@ public abstract class Worker {
     }
 
     protected void getUp(){
-        System.out.println("Getting up from bed");
+        System.out.println("Getting up from bed at 8 o clock");
     }
 
     private void eatBreakfast(){
