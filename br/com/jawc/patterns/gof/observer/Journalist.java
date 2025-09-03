@@ -8,14 +8,14 @@ import java.util.List;
 
 public class Journalist implements Subject {
 
-    private List<Observer> observers = new ArrayList<>();
+    private List<Observers> observers = new ArrayList<>();
     private String title, summary, image, text;
 
-    public ArrayList<Observer> getObservers() {
+    public List<Observers> getObservers() {
         return observers;
     }
 
-    public void setObservers(ArrayList<Observer> observers) {
+    public void setObservers(ArrayList<Observers> observers) {
         this.observers = observers;
     }
 
@@ -61,12 +61,12 @@ public class Journalist implements Subject {
 
 
     @Override
-    public void registerObserver(java.util.Observer observer) {
+    public void registerObserver(Observers observer) {
         observers.add(observer);
     }
 
     @Override
-    public void removeObserver(java.util.Observer observer) {
+    public void removeObserver(Observers observer) {
         observers.remove(observer);
     }
 

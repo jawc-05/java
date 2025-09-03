@@ -3,6 +3,6 @@
  */
 package br.com.jawc.patterns.gof.observer;
 
-public interface Observer {
+public interface Observers {
     void update(Subject subject);
 }
