@@ -3,7 +3,7 @@
  */
 package br.com.jawc.patterns.gof.observer;
 
-public class Newspaper implements Observer {
+public class Newspaper implements Observers {
     @Override
     public void update(Subject subject) {
         if (subject instanceof Journalist) {
