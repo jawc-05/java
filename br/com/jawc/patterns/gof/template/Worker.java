@@ -8,8 +8,13 @@ public abstract class Worker {
     public void executeRoutine(){
         startRoutine();
         getUp();
+        eatBreakfast();
+        goingToWork();
+        working();
 
     }
+
+    protected abstract void working();
 
     private void startRoutine(){
         System.out.println("Starting routine");
@@ -17,5 +22,17 @@ public abstract class Worker {
 
     private void getUp(){
         System.out.println("Getting up from bed");
+    }
+
+    private void eatBreakfast(){
+        System.out.println("Eating breakfast");
+    }
+
+    private void goingToWork(){
+        System.out.println("Going to work");
+    }
+
+    private void goingToHome(){
+        System.out.println("Going to home");
     }
 }
