@@ -11,11 +11,11 @@ public abstract class Worker {
 
     }
 
-    public void startRoutine(){
+    private void startRoutine(){
         System.out.println("Starting routine");
     }
 
-    public void getUp(){
+    private void getUp(){
         System.out.println("Getting up from bed");
     }
 }
