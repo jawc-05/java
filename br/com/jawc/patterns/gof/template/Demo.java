@@ -13,6 +13,7 @@ public class Demo {
         p.executeRoutine();
         Worker l = new Lumberjack();
         l.executeRoutine();
-
+        Worker law = new Lawyer();
+        law.executeRoutine();
     }
 }
