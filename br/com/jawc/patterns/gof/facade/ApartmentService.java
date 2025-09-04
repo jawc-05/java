@@ -3,7 +3,7 @@
  */
 package br.com.jawc.patterns.gof.facade;
 
-public class ApartmentService implements IApartamentoService{
+public class ApartmentService implements IApartmentService{
 
     private void findAddress(){
 
@@ -16,7 +16,7 @@ public class ApartmentService implements IApartamentoService{
     }
 
     @Override
-    public void rentApartmente() {
+    public void rentApartment() {
         findAddress();
         findPhone();
         findTotalValue();
