@@ -7,6 +7,6 @@ public class Demo {
 
     public static void main(String[] args) {
         IApartmentService service = new ApartmentService();
-        service.rentApartment();
+        service.rentApartment(new Apartment(1L,   "Rua do comércio 1441"));
     }
 }

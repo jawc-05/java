@@ -3,7 +3,7 @@
  */
 package br.com.jawc.patterns.gof.facade;
 
-public class Apartment {
+public class Apartment implements IApartmentService{
 
     private Long code;
 
@@ -28,5 +28,10 @@ public class Apartment {
 
     public void setEnd(String end) {
         this.end = end;
+    }
+
+    @Override
+    public void rentApartment(Apartment apartment) {
+
     }
 }

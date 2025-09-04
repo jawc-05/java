@@ -5,5 +5,5 @@ package br.com.jawc.patterns.gof.facade;
 
 public interface IApartmentService {
 
-    public void rentApartment();
+    public void rentApartment(Apartment apartment);
 }

@@ -16,7 +16,7 @@ public class ApartmentService implements IApartmentService{
     }
 
     @Override
-    public void rentApartment() {
+    public void rentApartment(Apartment apartment) {
         findAddress();
         findPhone();
         findTotalValue();
