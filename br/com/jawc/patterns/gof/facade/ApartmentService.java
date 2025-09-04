@@ -5,13 +5,13 @@ package br.com.jawc.patterns.gof.facade;
 
 public class ApartmentService implements IApartamentoService{
 
-    public void findAddress(){
+    private void findAddress(){
 
     }
-    public void findPhone(){
+    private void findPhone(){
 
     }
-    public void findTotalValue(){
+    private void findTotalValue(){
 
     }
 
