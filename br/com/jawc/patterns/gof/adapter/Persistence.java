@@ -3,8 +3,11 @@
  */
 package br.com.jawc.patterns.gof.adapter;
 
+import java.io.File;
+
 public interface Persistence {
 
-    void rec(File file);
-    File read(String id);
+    public void rec(File file);
+
+    public File read(String id);
 }
