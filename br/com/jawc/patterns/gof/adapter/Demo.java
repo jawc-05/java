@@ -11,7 +11,7 @@ public class Demo {
         //Lib externa
         DropBox dropBox = new DropBox();
         Persistence persistence = new DropBoxAdapter(dropBox);
-        persistence.record(new File(dirFile));
+        persistence.rec(new File(dirFile));
 
     }
 }
