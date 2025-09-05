@@ -3,6 +3,8 @@
  */
 package br.com.jawc.patterns.gof.adapter;
 
+import java.io.File;
+
 public class DropBoxAdapter  implements Persistence{
 
     private DropBox dropBox;
