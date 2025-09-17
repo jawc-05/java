@@ -7,8 +7,9 @@ public class GenericEntry<T, E> {
 
 
 
-    public GenericEntry(T data) {
+    public GenericEntry(T data, E codigo) {
         this.data = data;
+        this.codigo = codigo;
     }
 
     public T getData() {
