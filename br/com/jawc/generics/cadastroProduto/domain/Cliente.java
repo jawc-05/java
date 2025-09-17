@@ -26,21 +26,10 @@ public class Cliente {
     }
 
     @Override
-    public boolean equals(Object obj) {
-        if (this == obj){
-            return true;
-        }
-        if (obj == null){
-            return false;
-        }
-        if (getClass() != obj.getClass()){
-            return false;
-        }
-        final br.com.jawc.CRUDmemoria.domain.Cliente other = (br.com.jawc.CRUDmemoria.domain.Cliente) obj;
-        if (!Objects.equals(this.cpf, other.cpf)){
-            return false;
-        }
-        return  true;
+    public boolean equals(Object o) {
+        if (o == null || getClass() != o.getClass()) return false;
+        Cliente cliente = (Cliente) o;
+        return Objects.equals(nome, cliente.nome) && Objects.equals(cpf, cliente.cpf) && Objects.equals(tel, cliente.tel) && Objects.equals(end, cliente.end) && Objects.equals(numero, cliente.numero) && Objects.equals(cidade, cliente.cidade) && Objects.equals(estado, cliente.estado);
     }
 
     @Override
@@ -111,5 +100,4 @@ public class Cliente {
     public int hashCode() {
         return Objects.hashCode(cpf);
     }
-}
 }
