@@ -1,3 +1,6 @@
+/**
+ * @author jawc
+ */
 package br.com.jawc.generics;
 
 public class GenericEntry<T, E> {
