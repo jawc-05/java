@@ -3,7 +3,7 @@
  */
 package br.com.jawc.generics.cadastroProduto.domain;
 
-public class Produto {
+public class Produto implements Persistente {
 
     private Long codigo;
     private String nome;

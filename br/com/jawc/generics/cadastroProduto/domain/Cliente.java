@@ -3,9 +3,10 @@
  */
 package br.com.jawc.generics.cadastroProduto.domain;
 
+import java.io.Serializable;
 import java.util.Objects;
 
-public class Cliente {
+public class Cliente implements Persistente {
 
     private String nome;
     private Long cpf;
