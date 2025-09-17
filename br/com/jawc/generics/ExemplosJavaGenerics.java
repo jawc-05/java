@@ -3,7 +3,9 @@
  */
 package br.com.jawc.generics;
 
+import br.com.jawc.generics.fruta.Banana;
 import br.com.jawc.generics.fruta.Fruta;
+import br.com.jawc.generics.fruta.Maca;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -27,12 +29,17 @@ public class ExemplosJavaGenerics {
         Long primeiroLong = pegarPrimeiroLista(listaLong);
         System.out.println(primeiroLong);
 
+        List<Fruta> listaFruta = new ArrayList<>();
+        listaFruta.add(new Banana());
+        listaFruta.add(new Maca());
+        imprimirFrutas(listaFruta);
+
 //        Long primeiroLong1 = pegarPrimeiroListaLong(lista);
 //        System.out.println(primeiroLong1);
 
     }
 
-    public static void imprimirFrutas(List<Fruta> frutas) {
+    public static void imprimirFrutas(List<? extends Fruta> frutas) {
         for (Fruta fruta : frutas) {
             System.out.println(fruta);
         }
