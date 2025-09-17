@@ -13,9 +13,9 @@ import java.util.Map;
 public abstract class GenericDAO<T extends Persistente> implements IGenericDAO<T> {
 
 
-    private Map<Class, Map<Long, T>> map;
+    private Map<Long, Map<Long, T>> map;
 
-    
+    public abstract Class<T> getClassType();
 
     public GenericDAO() {
         this.map = new HashMap<>();
@@ -43,6 +43,11 @@ public abstract class GenericDAO<T extends Persistente> implements IGenericDAO<T
 
     @Override
     public Boolean cadastrar(T entity) {
-        return null;
+        Map<Long, T> mapaInterno = this.map.get(getClassType());
+        if (mapaInterno.containsKey(entity.getCodigo())) {
+            return false;
+        }
+        mapaInterno.put(entity.getCodigo(), entity);
+        return true;
     }
 }

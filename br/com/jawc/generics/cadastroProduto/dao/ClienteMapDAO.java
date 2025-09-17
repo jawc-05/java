@@ -12,6 +12,13 @@ import java.util.Map;
 
 public class ClienteMapDAO extends GenericDAO<Cliente> implements IClienteDAO{
 
+
+
+    @Override
+    public Class<Cliente> getClassType() {
+        return Cliente.class;
+    }
+
 //    private Map<Long, Cliente> map;
 //
 //    public ClienteMapDAO() {
