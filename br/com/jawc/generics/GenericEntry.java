@@ -1,4 +1,6 @@
 package br.com.jawc.generics;
 
-public class GenericEntry {
+public class GenericEntry<T> {
+
+    private T data;
 }
