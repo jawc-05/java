@@ -3,5 +3,5 @@
  */
 package br.com.jawc.generics.fruta;
 
-public class Maca {
+public class Maca implements Fruta {
 }
