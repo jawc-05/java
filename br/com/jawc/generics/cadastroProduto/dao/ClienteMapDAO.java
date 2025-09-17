@@ -6,12 +6,11 @@ package br.com.jawc.generics.cadastroProduto.dao;
 import br.com.jawc.generics.cadastroProduto.dao.generic.GenericDAO;
 import br.com.jawc.generics.cadastroProduto.domain.Cliente;
 
-import java.util.Collection;
-import java.util.HashMap;
-import java.util.Map;
-
 public class ClienteMapDAO extends GenericDAO<Cliente> implements IClienteDAO{
 
+    public ClienteMapDAO() {
+        super();
+    }
 
 
     @Override

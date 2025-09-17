@@ -13,12 +13,17 @@ import java.util.Map;
 public abstract class GenericDAO<T extends Persistente> implements IGenericDAO<T> {
 
 
-    private Map<Long, Map<Long, T>> map;
+    protected Map<Class<T>, Map<Long, T>> map;
 
     public abstract Class<T> getClassType();
 
     public GenericDAO() {
         this.map = new HashMap<>();
+        Map<Long, T> mapaInterno = this.map.get(getClassType());
+        if (mapaInterno == null) {
+            mapaInterno = new HashMap<>();
+            this.map.put(getClassType(), mapaInterno);
+        }
     }
 
     @Override
