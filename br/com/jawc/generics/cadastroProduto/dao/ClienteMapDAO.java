@@ -15,6 +15,13 @@ public class ClienteMapDAO extends GenericDAO<Cliente> implements IClienteDAO{
 
     @Override
     public void atualizarDados(Cliente entity, Cliente entityCadastrado) {
+        entityCadastrado.setNome(entity.getNome());
+        entityCadastrado.setCpf(entity.getCpf());
+        entityCadastrado.setTel(entity.getTel());
+        entityCadastrado.setCidade(entity.getCidade());
+        entityCadastrado.setEstado(entity.getEstado());
+        entityCadastrado.setEnd(entity.getEnd());
+        entityCadastrado.setNumero(entity.getNumero());
 
     }
 
