@@ -15,6 +15,8 @@ public abstract class GenericDAO<T extends Persistente> implements IGenericDAO<T
 
     protected Map<Class<T>, Map<Long, T>> map;
 
+    public abstract void atualizarDados(T entity);
+
     public abstract Class<T> getClassType();
 
     public GenericDAO() {
