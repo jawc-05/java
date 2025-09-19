@@ -33,7 +33,8 @@ public abstract class GenericDAO<T extends Persistente> implements IGenericDAO<T
 
     @Override
     public Collection<T> consultarTodos() {
-        return List.of();
+        Map<Long, T> mapaInterno = this.map.get(getClassType());
+        return mapaInterno.values();
     }
 
     @Override
