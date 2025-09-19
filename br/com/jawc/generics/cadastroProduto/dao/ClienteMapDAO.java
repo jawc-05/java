@@ -14,6 +14,11 @@ public class ClienteMapDAO extends GenericDAO<Cliente> implements IClienteDAO{
 
 
     @Override
+    public void atualizarDados(Cliente entity) {
+
+    }
+
+    @Override
     public Class<Cliente> getClassType() {
         return Cliente.class;
     }
