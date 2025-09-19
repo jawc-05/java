@@ -46,7 +46,7 @@ public abstract class GenericDAO<T extends Persistente> implements IGenericDAO<T
         Map<Long, T> mapaInterno = this.map.get(getClassType());
         T objetoCadastrado = mapaInterno.get(getClassType());
         if (objetoCadastrado != null) {
-
+            atualizarDados(entity,  objetoCadastrado);
         }
     }
 
