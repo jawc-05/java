@@ -43,7 +43,11 @@ public abstract class GenericDAO<T extends Persistente> implements IGenericDAO<T
 
     @Override
     public void excluir(Long value) {
-
+        Map<Long, T> mapaInterno = this.map.get(getClassType());
+        T objetoCadastrado = mapaInterno.get(value);
+        if (objetoCadastrado != null) {
+            mapaInterno.remove(value, objetoCadastrado);
+        }
     }
 
     @Override
