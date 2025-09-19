@@ -8,12 +8,19 @@ import br.com.jawc.generics.cadastroProduto.domain.Cliente;
 import br.com.jawc.generics.cadastroProduto.domain.Produto;
 
 import java.util.Collection;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class ProdutoDAO extends GenericDAO<Produto> implements IProdutoDAO {
 
     public ProdutoDAO() {
         super();
+        Map<Long, Produto> mapaInterno = this.map.get(getClassType());
+        if (mapaInterno == null) {
+            mapaInterno = new HashMap<>();
+            this.map.put(getClassType(), mapaInterno);
+        }
     }
 
     @Override
@@ -28,6 +35,6 @@ public class ProdutoDAO extends GenericDAO<Produto> implements IProdutoDAO {
 
     @Override
     public Class<Produto> getClassType() {
-        return null;
+        return Produto.class;
     }
 }
