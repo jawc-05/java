@@ -38,7 +38,11 @@ public abstract class GenericDAO<T extends Persistente> implements IGenericDAO<T
 
     @Override
     public void alterar(T entity) {
+        Map<Long, T> mapaInterno = this.map.get(getClassType());
+        T objetoCadastrado = mapaInterno.get(getClassType());
+        if (objetoCadastrado != null) {
 
+        }
     }
 
     @Override
