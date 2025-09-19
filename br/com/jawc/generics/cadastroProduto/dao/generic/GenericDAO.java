@@ -3,6 +3,7 @@
  */
 package br.com.jawc.generics.cadastroProduto.dao.generic;
 
+import br.com.jawc.generics.cadastroProduto.domain.Cliente;
 import br.com.jawc.generics.cadastroProduto.domain.Persistente;
 
 import java.util.Collection;
@@ -15,7 +16,9 @@ public abstract class GenericDAO<T extends Persistente> implements IGenericDAO<T
 
     protected Map<Class<T>, Map<Long, T>> map;
 
-    public abstract void atualizarDados(T entity);
+    public abstract void atualizarDados(T entity, T entityCadastrado);
+
+    public abstract void atualizarDados(Cliente entity);
 
     public abstract Class<T> getClassType();
 
