@@ -1,7 +1,7 @@
 /**
  * @author jawc-05
  */
-package br.com.jawc.carros;
+package br.com.jawc.carros.app;
 
 import br.com.jawc.carros.abstracts.Carro;
 import br.com.jawc.carros.concretes.Civic;
