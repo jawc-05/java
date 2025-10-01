@@ -11,6 +11,6 @@ public class Fusion extends Carro{
 
     @Override
     public void dirigir() {
-        System.out.println("O"+ this.getClass().getSimpleName()+" está andando");
+        System.out.println("O"+ this.getClass().getSimpleName()+" de modelo: "+ getModelo() + " e ano: "+ getAno() + "está andando");
     }
 }
