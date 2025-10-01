@@ -11,6 +11,6 @@ public class Corolla extends Carro{
 
     @Override
     public void dirigir() {
-
+        System.out.println("O"+ this.getClass().getSimpleName()+" está andando");
     }
 }
