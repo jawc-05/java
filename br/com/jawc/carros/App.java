@@ -9,6 +9,10 @@ import java.util.List;
 public class App {
 
     public static void main(String[] args) {
+
+    }
+
+    private static void insertLists(List<Carro>){
         List<Carro> carros = new ArrayList<Carro>();
         carros.add(new Civic("Honda", "Type-R", 2025));
         carros.add(new Corolla("Toyota", "GR", 2025));
