@@ -3,7 +3,9 @@
  */
 package br.com.jawc.carros;
 
-public class Fusion extends Carro{
+import br.com.jawc.carros.abstracts.Carro;
+
+public class Fusion extends Carro {
 
     public Fusion(String marca, String modelo, Integer ano) {
         super(marca, modelo, ano);

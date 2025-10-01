@@ -3,7 +3,9 @@
  */
 package br.com.jawc.carros;
 
-public class Jetta extends Carro{
+import br.com.jawc.carros.abstracts.Carro;
+
+public class Jetta extends Carro {
 
     public Jetta(String marca, String modelo, Integer ano) {
         super(marca, modelo, ano);

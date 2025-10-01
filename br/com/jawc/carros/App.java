@@ -3,6 +3,8 @@
  */
 package br.com.jawc.carros;
 
+import br.com.jawc.carros.abstracts.Carro;
+
 import java.util.ArrayList;
 import java.util.List;
 

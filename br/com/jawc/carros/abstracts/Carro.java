@@ -1,7 +1,7 @@
 /**
  * @author jawc
  */
-package br.com.jawc.carros;
+package br.com.jawc.carros.abstracts;
 
 public abstract class Carro {
 
