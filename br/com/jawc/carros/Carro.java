@@ -9,7 +9,5 @@ public abstract class Carro {
     private String marca;
     private Integer ano;
 
-    public abstract void dirigir(){
-
-    }
+    public abstract void dirigir();
 }
