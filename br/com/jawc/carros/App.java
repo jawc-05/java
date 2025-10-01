@@ -4,6 +4,10 @@
 package br.com.jawc.carros;
 
 import br.com.jawc.carros.abstracts.Carro;
+import br.com.jawc.carros.concretes.Civic;
+import br.com.jawc.carros.concretes.Corolla;
+import br.com.jawc.carros.concretes.Fusion;
+import br.com.jawc.carros.concretes.Jetta;
 
 import java.util.ArrayList;
 import java.util.List;

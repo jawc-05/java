@@ -1,13 +1,13 @@
 /**
  * @author jawc
  */
-package br.com.jawc.carros;
+package br.com.jawc.carros.concretes;
 
 import br.com.jawc.carros.abstracts.Carro;
 
-public class Civic  extends Carro {
+public class Corolla extends Carro {
 
-    public Civic(String marca, String modelo, Integer ano) {
+    public Corolla(String marca, String modelo, Integer ano) {
         super(marca, modelo, ano);
     }
 
