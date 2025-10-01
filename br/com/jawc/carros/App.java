@@ -11,6 +11,7 @@ public class App {
     public static void main(String[] args) {
         List<Carro> carros = new ArrayList<Carro>();
         insertLists(carros);
+        read(carros);
     }
 
     private static void insertLists(List<Carro> carros){
@@ -18,5 +19,11 @@ public class App {
         carros.add(new Corolla("Toyota", "GR", 2025));
         carros.add(new Jetta("Volkswagen", "TSI", 2025));
         carros.add(new Fusion("Ford", "Titanium", 2025));
+    }
+
+    private static void read(List<Carro> carros){
+        for (Carro carro : carros){
+            carro.dirigir();
+        }
     }
 }
