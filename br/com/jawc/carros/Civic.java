@@ -11,6 +11,6 @@ public class Civic  extends Carro{
 
     @Override
     public void dirigir() {
-        System.out.println("O"+ this.getClass().getSimpleName()+" está andando");
+        System.out.println("O"+ this.getClass().getSimpleName()+" de modelo: "+ get + " e ano: "+ ano + "está andando");
     }
 }

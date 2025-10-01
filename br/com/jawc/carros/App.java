@@ -10,6 +10,7 @@ public class App {
 
     public static void main(String[] args) {
         List<Carro> carros = new ArrayList<Carro>();
+        insertLists(carros);
     }
 
     private static void insertLists(List<Carro> carros){
