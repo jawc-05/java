@@ -3,9 +3,9 @@
  */
 package br.com.jawc.annotation;
 
-@AnnotationExample
+@AnnotationExample(value = "João")
 public class ClassWithAnnotation {
 
-    @AnnotationExample
+    @AnnotationExample(value = "Alfredo")
     private String nome;
 }
