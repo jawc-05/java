@@ -14,4 +14,6 @@ public @interface AnnotationExample {
     String[] bairros();
 
     long numCasa();
+
+    double values() default 1d;
 }
