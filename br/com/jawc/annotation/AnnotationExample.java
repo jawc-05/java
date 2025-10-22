@@ -12,4 +12,6 @@ public @interface AnnotationExample {
     String value();
 
     String[] bairros();
+
+    long numCasa();
 }
