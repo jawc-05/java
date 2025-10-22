@@ -10,4 +10,6 @@ import java.lang.annotation.*;
 @Target({ElementType.TYPE, ElementType.FIELD})
 public @interface AnnotationExample {
     String value();
+
+    String[] bairros();
 }
