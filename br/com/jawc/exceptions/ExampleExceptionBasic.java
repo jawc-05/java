@@ -20,6 +20,10 @@ public class ExampleExceptionBasic {
             System.out.println("A frase inicial está nula");
             phrase = "Frase Vazia";
             newPhrase = phrase.toUpperCase();
+        }finally{
+            newPhrase = phrase.toUpperCase();
         }
+        System.out.println("Frase Antiga: "+ phrase);
+        System.out.println("Frase Nova: "+ newPhrase);
     }
 }
