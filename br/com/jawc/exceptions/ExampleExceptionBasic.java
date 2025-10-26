@@ -28,6 +28,15 @@ public class ExampleExceptionBasic {
         System.out.println("Frase Nova: "+ newPhrase);
     }
 
+
+    private static void exception(){
+        try{
+            ExemploThrow.saque(500);
+        }catch (LimiteSaqueException){
+            System.out.println("ERRO: "+e.getMessage());
+        }
+    }
+
     private static void saque (double valor) throws LimiteSaqueException{
 
         if (valor > 400){
