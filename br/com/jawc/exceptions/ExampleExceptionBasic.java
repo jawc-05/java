@@ -15,7 +15,8 @@ public class ExampleExceptionBasic {
 
         try{
             newPhrase = phrase.toUpperCase();
-        }catch(NullPointerException e){
+
+        }catch(Exception e){
             //Tratamento da Exceção:
             System.out.println("A frase inicial está nula");
             phrase = "Frase Vazia";
