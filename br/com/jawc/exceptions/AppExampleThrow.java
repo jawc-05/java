@@ -6,7 +6,8 @@ package br.com.jawc.exceptions;
 public class AppExampleThrow {
 
     public static void main(String[] args) {
-
+        exception();
+        runtimeException();
     }
 
     private static void runtimeException(){
