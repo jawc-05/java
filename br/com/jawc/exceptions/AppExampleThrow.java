@@ -7,9 +7,10 @@ public class AppExampleThrow {
 
     public static void main(String[] args) {
         exception();
-        runtimeException();
+        //runtimeException();
     }
 
+    // UM ERRO DESSA FORMA FAZ COM QUE A APLICAÇÃO PARE DE FUNCIONAR, NÃO TENDO TRATAMENTO ALGUM
     private static void runtimeException(){
         ExampleThrow.withdrawRuntimeException(500);
     }
