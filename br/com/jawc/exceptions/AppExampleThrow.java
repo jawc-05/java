@@ -10,6 +10,14 @@ public class AppExampleThrow {
     }
 
     private static void runtimeException(){
-        Exemplo.throw
+        ExampleThrow.withdrawRuntimeException(500);
+    }
+
+    private static void exception(){
+        try{
+            ExampleThrow.withdraw(500);
+        } catch (LimitWithdrawException erro){
+            System.out.println("ERRO: " + erro.getMessage());
+        }
     }
 }

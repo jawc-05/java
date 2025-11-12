@@ -39,15 +39,4 @@ public class ExampleExceptionBasic {
         }
         System.out.println("TESTE");
     }
-
-
-    private static void exception(){
-        try{
-            ExemploThrow.saque(500);
-        }catch (LimiteSaqueException){
-            System.out.println("ERRO: "+e.getMessage());
-        }
-    }
-
-
 }
