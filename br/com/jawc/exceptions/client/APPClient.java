@@ -15,7 +15,8 @@ public class APPClient {
 
         try{
             ClientService.searchClient(option);
-        } catch (ClientNotFoundException e) {
+        } catch (ClientNotFound2Exception e) {
+            e.printStackTrace();
             JOptionPane.showMessageDialog(null, e.getMessage(), "ERRO", JOptionPane.ERROR_MESSAGE);
         }
 
