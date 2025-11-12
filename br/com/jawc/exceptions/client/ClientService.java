@@ -5,7 +5,7 @@ package br.com.jawc.exceptions.client;
 
 public class ClientService {
 
-    public void searchClient(String code) throws ClientNotFoundException {
+    public static void searchClient(String code) throws ClientNotFoundException {
         //BUSCA NO BANCO DE DADOS
         boolean isSigned = false;
 
