@@ -3,9 +3,12 @@
  */
 package br.com.jawc.generics.cadastroProduto.dao.generic;
 
+import br.com.jawc.generics.cadastroProduto.annotation.KeyType;
 import br.com.jawc.generics.cadastroProduto.domain.Cliente;
 import br.com.jawc.generics.cadastroProduto.domain.Persistente;
 
+import java.lang.reflect.Field;
+import java.lang.reflect.Method;
 import java.util.Collection;
 import java.util.HashMap;
 import java.util.List;
@@ -26,6 +29,18 @@ public abstract class GenericDAO<T extends Persistente> implements IGenericDAO<T
         if (this.map == null) {
             this.map = new HashMap<>();
         }
+    }
+
+    public Long getKey(T entity) throws NoSuchMethodException {
+        Field[] fields = entity.getClass().getDeclaredFields();
+        for (Field field : fields ) {
+            if(field.isAnnotationPresent(KeyType.class)){
+                KeyType keyType = field.getAnnotation(KeyType.class);
+                String methodName = keyType.value();
+                Method method = entity.getClass().getMethod(methodName);
+            }
+        }
+        return 0L;
     }
 
     @Override
@@ -64,6 +79,7 @@ public abstract class GenericDAO<T extends Persistente> implements IGenericDAO<T
         if (mapaInterno.containsKey(entity.getCodigo())) {
             return false;
         }
+        Long key = getChave(entity);
         mapaInterno.put(entity.getCodigo(), entity);
         return true;
     }

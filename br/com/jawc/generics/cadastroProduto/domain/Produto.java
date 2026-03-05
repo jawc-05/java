@@ -3,8 +3,11 @@
  */
 package br.com.jawc.generics.cadastroProduto.domain;
 
+import br.com.jawc.generics.cadastroProduto.annotation.KeyType;
+
 public class Produto implements Persistente {
 
+    @KeyType("getCodigo ")
     private Long codigo;
     private String nome;
 
