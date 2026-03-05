@@ -102,8 +102,8 @@ public class Cliente implements Persistente {
         return Objects.hashCode(cpf);
     }
 
-    @Override
-    public Long getCodigo() {
-        return this.cpf;
-    }
+//    @Override
+//    public Long getCodigo() {
+//        return this.cpf;
+//    }
 }
