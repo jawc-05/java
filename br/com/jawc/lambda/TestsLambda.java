@@ -19,7 +19,14 @@ public class TestsLambda {
             System.out.println("BiFunction: ");
             return a + b;
         };
-        System.out.println(biFunc.apply(2, 2)); //Integer resultBi = biFunc.apply(2,2);
+        System.out.println(biFunc.apply(10, 10)); //Integer resultBi = biFunc.apply(2,2);
                                                         //System.out.println(resultBi);
+
+        BiFunction<Double, Double, String> biDbFunc = (Double a, Double b) ->{
+            Double res = a + b;
+            return String.valueOf(res);
+        };
+        String resultStr = biDbFunc.apply(10d,10d);
+        System.out.println("String: "+resultStr);
     }
 }
