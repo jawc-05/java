@@ -28,5 +28,14 @@ public class TestsLambda {
         };
         String resultStr = biDbFunc.apply(10d,10d);
         System.out.println("String: "+resultStr);
+
+        Long returnLong = calcular(10L, 10L, (Long v1, Long v2) -> {
+            return v1 + v2;
+        });
+        System.out.println("Long: "+returnLong);
+    }
+
+    private static Long calcular(Long u, Long t, BiFunction<Long, Long, Long> function){
+        return function.apply(u,t);
     }
 }
