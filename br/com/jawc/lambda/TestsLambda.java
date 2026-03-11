@@ -13,7 +13,7 @@ public class TestsLambda {
             return a + b;
         };
          System.out.println("IntBinaryOperator:");
-         System.out.println( iBin.applyAsInt(1, 2));
+         System.out.println( iBin.applyAsInt(10, 10));
 
         BiFunction<Integer, Integer, Integer> biFunc = (a, b) -> {
             System.out.println("BiFunction: ");
