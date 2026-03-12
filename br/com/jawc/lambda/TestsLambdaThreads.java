@@ -19,5 +19,7 @@ public class TestsLambdaThreads {
         };
         new Thread(r2).start();
 
+        new Thread(() -> System.out.println("Executando Runnable com lambda de forma mais direta ainda!")).start();
+
     }
 }
