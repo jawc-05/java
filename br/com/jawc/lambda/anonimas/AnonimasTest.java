@@ -12,7 +12,14 @@ public class AnonimasTest {
                 System.out.println(value);
             }
         };
-        anonima.consumer("Teste anonima");
+        anonima.consumer("Teste Anonima"); //Devido a ser Object poderia ser também:
+        //anonima.consumer(20);
+
+
+
+        MyEventConsumer anonimaLambda = (Object value) -> System.out.println(value);
+        anonimaLambda.consumer("Teste Lambda");//Devido a ser Object poderia ser também:
+        //anonimaLambda.consumer(10);
 
     }
 }
