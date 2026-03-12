@@ -4,6 +4,7 @@
 package br.com.jawc.lambda;
 
 import java.util.function.BiFunction;
+import java.util.function.Consumer;
 import java.util.function.IntBinaryOperator;
 
 public class TestsLambda {
@@ -33,6 +34,13 @@ public class TestsLambda {
             return v1 + v2;
         });
         System.out.println("Long: "+returnLong);
+
+        Runnable hello_world = () -> System.out.println("Hello World");
+        n
+        Consumer<String> stringConsumer = (String s) -> {
+            System.out.println(s);
+        };
+        stringConsumer.accept("Value ");
     }
 
     private static Long calcular(Long u, Long t, BiFunction<Long, Long, Long> function){
