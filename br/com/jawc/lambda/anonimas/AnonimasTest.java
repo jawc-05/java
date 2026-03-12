@@ -21,11 +21,13 @@ public class AnonimasTest {
         anonimaLambda.consumer("Teste Lambda");//Devido a ser Object poderia ser também:
         //anonimaLambda.consumer(10);
 
-        gettingInterfaceAsParameter((Object value) -> System.out.println(value));
+        gettingInterfaceAsParameter("Value" , value -> System.out.println(value));
+
+        gettingInterfaceAsParameter(Boolean.TRUE , value -> System.out.println(value));
 
     }
 
-    private static void gettingInterfaceAsParameter(MyEventConsumer anonLambda) {
-        anonLambda.consumer(100000);
+    private static void gettingInterfaceAsParameter(Object o, MyEventConsumer anonLambda) {
+        anonLambda.consumer(o);
     }
 }
