@@ -20,9 +20,9 @@ public class WhenUseParentesis {
 
 
         //Se tiver return tem q ter {} mas não necessariamente o ()
-        MyEventConsumerReturn ret = (s) ->{
+        MyEventConsumerReturn<String> ret = (s) ->{
             System.out.println(s);
-            return s;
+            return "Oi, nesse caso precisamos usar {}!";
         };
     }
 }
