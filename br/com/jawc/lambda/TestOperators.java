@@ -14,6 +14,7 @@ public class TestOperators {
     public static void main(String[] args) {
 
         List<Integer> list = Arrays.asList(1, 2,3,4,5,6,7,8,9,10,11,12);
+        printList(list);
         System.out.println("Multiplica todos os elementos da lista por 5!");
         doOperator(list, (n) -> n *5);
 
@@ -22,6 +23,12 @@ public class TestOperators {
 
         System.out.println("Transforma todos os elementos da lista em 0!");
         doOperator(list, (n) -> 0);
+    }
+
+
+    private static void printList(List<Integer> list){
+        System.out.println("Elementos da Lista: ");
+        list.forEach(System.out::println);
     }
 
     private static void doOperator(List<Integer> list, IntFunction<Integer> function) {
