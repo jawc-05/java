@@ -3,6 +3,8 @@
  */
 package br.com.jawc.streams;
 
+import java.util.List;
+
 public class Person {
 
     private String id;
@@ -50,6 +52,14 @@ public class Person {
 
     public void setAge(int age) {
         this.age = age;
+    }
+
+    public List<Person> createPersons() {
+        Person person1 = new Person("1", "Caedyn", "American", 20);
+        Person person2 = new Person("2", "João", "Brazilian", 20);
+        Person person3 = new Person("3", "Alfredo", "Brazilian", 20);
+        Person person4 = new Person("4", "Dimitri", "Greek", 21);
+        return List.of(person1, person2, person3, person4);
     }
 
 }
