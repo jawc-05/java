@@ -55,10 +55,10 @@ public class Person {
     }
 
     public List<Person> createPersons() {
-        Person person1 = new Person("1", "Caedyn", "American", 20);
-        Person person2 = new Person("2", "João", "Brazilian", 20);
-        Person person3 = new Person("3", "Alfredo", "Brazilian", 20);
-        Person person4 = new Person("4", "Dimitri", "Greek", 21);
+        Person person1 = new Person("1", "Caedyn", "USA", 20);
+        Person person2 = new Person("2", "João", "Brazil", 20);
+        Person person3 = new Person("3", "Alfredo", "Brazil", 20);
+        Person person4 = new Person("4", "Dimitri", "Greece", 21);
         return List.of(person1, person2, person3, person4);
     }
 
