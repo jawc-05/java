@@ -11,9 +11,7 @@ public class FilterExamples {
     public static void main(String[] args) {
 
             List <Person> persons = new Person().createPersons();
-
             Stream<Person> stream = persons.stream().filter(person -> person.getNationality().equals("Brazil"));
-            stream.forEach(System.out::println);
         }
 
     }
