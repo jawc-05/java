@@ -19,7 +19,7 @@ public class MapExamples {
         stream.forEach(System.out::println);
 
 
-        //The same thing but using IntStream
+        //The same thing but using IntStream, this is to minimize the cpu/mem use
         IntStream streamInt = list.stream()
                 .filter(person -> person.getNationality().equals("Brazil"))
                 .mapToInt(Person::getAge);
