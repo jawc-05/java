@@ -63,19 +63,19 @@ public class Person {
     public boolean equals(Object o) {
         if (o == null || getClass() != o.getClass()) return false;
         Person person = (Person) o;
-        return age == person.age && Objects.equals(id, person.id) && Objects.equals(name, person.name) && Objects.equals(nationality, person.nationality);
+        return Objects.equals(id, person.id) && Objects.equals(name, person.name);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, name, nationality, age);
+        return Objects.hash(id, name);
     }
 
     public List<Person> createPersons() {
-        Person person1 = new Person("1", "Caedyn", "USA", 20);
-        Person person2 = new Person("2", "João", "Brazil", 21);
-        Person person3 = new Person("3", "Alfredo", "Brazil", 20);
-        Person person4 = new Person("4", "Dimitri", "Greece", 21);
+        Person person1 = new Person("01", "Caedyn", "USA", 20);
+        Person person2 = new Person("02", "João", "Brazil", 21);
+        Person person3 = new Person("03", "Alfredo", "Brazil", 20);
+        Person person4 = new Person("04", "Dimitri", "Greece", 21);
         return List.of(person1, person2, person3, person4);
     }
 
