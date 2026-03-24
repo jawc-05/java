@@ -4,6 +4,7 @@
 package br.com.jawc.streams;
 
 import java.util.List;
+import java.util.Objects;
 
 public class Person {
 
@@ -56,6 +57,18 @@ public class Person {
 
     public void setAge(int age) {
         this.age = age;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (o == null || getClass() != o.getClass()) return false;
+        Person person = (Person) o;
+        return age == person.age && Objects.equals(id, person.id) && Objects.equals(name, person.name) && Objects.equals(nationality, person.nationality);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id, name, nationality, age);
     }
 
     public List<Person> createPersons() {
