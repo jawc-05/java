@@ -14,9 +14,12 @@ public class FinalOperationsWithStreams {
         List<Person> list = new Person().createPersons();
 
         forEach(list);
+        count(list);
     }
 
     private static void forEach(List<Person> list) {
+        System.out.println("********** for Each **********");
+
         list.stream().forEach(person -> System.out.println(person.getName()));
 
         System.out.println("********** BRASILEIROS **********");
@@ -43,4 +46,13 @@ public class FinalOperationsWithStreams {
                 .map(Person :: getAge)
                 .forEach(System.out::println);
     }
+
+     private static void count(List<Person> list){
+        System.out.println("*********** count ***********");
+
+        long count = list.stream()
+                .filter(person -> person.getName().startsWith("J"))
+                .count();
+        System.out.println(count);
+     }
 }

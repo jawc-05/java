@@ -77,7 +77,8 @@ public class Person {
         Person person3 = new Person("03", "Alfredo", "Brazil", 20);
         Person person4 = new Person("04", "Dimitri", "Greece", 21);
         Person person5 = new Person("04", "Dimitri", "Greece", 21);
-        return List.of(person1, person2, person3, person4, person5);
+        Person person6 = new Person("05", "José", "Spain", 25);
+        return List.of(person1, person2, person3, person4, person5, person6);
     }
 
 }
