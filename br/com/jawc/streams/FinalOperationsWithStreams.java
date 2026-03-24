@@ -34,5 +34,13 @@ public class FinalOperationsWithStreams {
         Stream<Person> stream = list.stream()
                 .filter(person -> person.getNationality().equals("Brazil"));
         stream.forEach(pBrazilian -> System.out.println(pBrazilian.getName()));
+
+
+
+        System.out.println("********** AGES FROM THE BRAZILIAN PEOPLE **********");
+        list.stream()
+                .filter(person -> person.getNationality().equals("Brazil"))
+                .map(Person :: getAge)
+                .forEach(System.out::println);
     }
 }
