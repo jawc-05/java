@@ -6,6 +6,7 @@ package br.com.jawc.streams;
 import br.com.jawc.streams.intermediates.Person;
 
 import java.util.List;
+import java.util.stream.Stream;
 
 public class FinalOperationsWithStreams {
 
@@ -25,5 +26,13 @@ public class FinalOperationsWithStreams {
                 /// .forEach(pBrazilian -> System.out.println(pBrazilian)) it'll work, but is gonna show the hashCodes not the "real" names
                 .forEach(pBrazilian -> System.out.println(pBrazilian.getName()));
 
+
+        System.out.println("********** ANOTHER WAY, SAME RESULT **********");
+
+
+        //Can be done using this way, but its not the most used
+        Stream<Person> stream = list.stream()
+                .filter(person -> person.getNationality().equals("Brazil"));
+        stream.forEach(pBrazilian -> System.out.println(pBrazilian.getName()));
     }
 }
