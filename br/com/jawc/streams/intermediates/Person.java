@@ -1,7 +1,7 @@
 /**
  * @author jawc
  */
-package br.com.jawc.streams;
+package br.com.jawc.streams.intermediates;
 
 import java.util.List;
 import java.util.Objects;

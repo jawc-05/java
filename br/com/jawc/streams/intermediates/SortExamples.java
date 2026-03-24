@@ -1,7 +1,7 @@
 /**
  * @author jawc-05
  */
-package br.com.jawc.streams;
+package br.com.jawc.streams.intermediates;
 
 import java.util.Comparator;
 import java.util.List;
