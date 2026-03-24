@@ -5,7 +5,9 @@ package br.com.jawc.streams;
 
 import br.com.jawc.streams.intermediates.Person;
 
+import java.util.ArrayList;
 import java.util.List;
+import java.util.Set;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
@@ -101,5 +103,17 @@ public class FinalOperationsWithStreams {
                 .filter(person -> person.getNationality().equals("Brazil"))
                 .collect(Collectors.toList())
                 .forEach(System.out :: println);
+
+        System.out.println("*********** OTHERS WERE LIST, NOW SET **********");
+        Set<Person> set = list.stream()
+                .filter(person -> person.getNationality().equals("USA"))
+                .collect(Collectors.toSet());
+        set.forEach(System.out::println);
+
+        System.out.println("*********** NOW ARRAYLIST ***********");
+        ArrayList<Person> arrayList = list.stream()
+                .filter(person -> person.getNationality().equals("Spain"))
+                .collect(Collectors.toCollection(ArrayList::new));
+        arrayList.forEach(System.out::println);
     }
 }
