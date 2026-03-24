@@ -86,6 +86,20 @@ public class FinalOperationsWithStreams {
         List<Person> PersonsStartsWithJ = list.stream()
                 .filter(person -> person.getName().startsWith("J"))
                 .collect(Collectors.toList());
-        System.out.println(PersonsStartsWithJ);
+        PersonsStartsWithJ.forEach(System.out::println);
+
+//        /// Can be this way
+//        list.stream()
+//                .filter(person -> person.getName().startsWith("J"))
+//                .collect(Collectors.toList())
+//                .forEach(System.out::println);
+
+        System.out.println("*********** BRASILEIROS ***********");
+
+        //Using so direct like this i dont think if has real uses in the market/real world, but its ok to learn
+        list.stream()
+                .filter(person -> person.getNationality().equals("Brazil"))
+                .collect(Collectors.toList())
+                .forEach(System.out :: println);
     }
 }
