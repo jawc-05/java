@@ -27,6 +27,10 @@ public class Person {
 
     }
 
+    public Person(Person person) {
+        this(person.getId(), person.getName(), person.getNationality(), person.getAge());
+    }
+
     public String getId() {
         return id;
     }

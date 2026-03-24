@@ -7,6 +7,7 @@ import br.com.jawc.streams.intermediates.Person;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 import java.util.Set;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
@@ -115,5 +116,11 @@ public class FinalOperationsWithStreams {
                 .filter(person -> person.getNationality().equals("Spain"))
                 .collect(Collectors.toCollection(ArrayList::new));
         arrayList.forEach(System.out::println);
+
+        System.out.println("*********** NOW MAP **********");
+        Map<Integer, Person> map = list.stream()
+                .filter(person -> person.getNationality().equals("Brazil"))
+                .collect(Collectors.toMap(Person::getAge, Person::new));
+        map.forEach((k,v) -> System.out.println(k + " / " + v));
     }
 }
