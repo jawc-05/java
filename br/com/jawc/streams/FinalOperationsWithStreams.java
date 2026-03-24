@@ -6,6 +6,7 @@ package br.com.jawc.streams;
 import br.com.jawc.streams.intermediates.Person;
 
 import java.util.List;
+import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 public class FinalOperationsWithStreams {
@@ -17,6 +18,7 @@ public class FinalOperationsWithStreams {
         count(list);
         allMatch(list);
         anyMatch(list);
+        collect(list);
     }
 
 
@@ -76,5 +78,14 @@ public class FinalOperationsWithStreams {
         boolean result = list.stream()
                 .anyMatch(person -> person.getNationality().equals("USA"));
         System.out.println(result);
+    }
+
+    private static void collect(List<Person> list) {
+        System.out.println("*********** Collect ***********");
+
+        List<Person> PersonsStartsWithJ = list.stream()
+                .filter(person -> person.getName().startsWith("J"))
+                .collect(Collectors.toList());
+        System.out.println(PersonsStartsWithJ);
     }
 }

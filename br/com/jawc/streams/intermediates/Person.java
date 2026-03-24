@@ -71,6 +71,17 @@ public class Person {
         return Objects.hash(id, name);
     }
 
+
+    @Override
+    public String toString() {
+        return "Person{" +
+                "ID = '" + id + '\'' +
+                ", NAME = '" + name + '\'' +
+                ", NATIONALITY = '" + nationality + '\'' +
+                ", AGE = " + age +
+                '}';
+    }
+
     public List<Person> createPersons() {
         Person person1 = new Person("01", "Caedyn", "USA", 20);
         Person person2 = new Person("02", "João", "Brazil", 21);
