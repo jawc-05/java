@@ -16,6 +16,7 @@ public class FinalOperationsWithStreams {
         forEach(list);
         count(list);
         allMatch(list);
+        anyMatch(list);
     }
 
 
@@ -50,7 +51,7 @@ public class FinalOperationsWithStreams {
                 .forEach(System.out::println);
     }
 
-     private static void count(List<Person> list){
+    private static void count(List<Person> list){
         System.out.println("*********** count ***********");
 
         long count = list.stream()
@@ -59,12 +60,21 @@ public class FinalOperationsWithStreams {
         System.out.println(count);
      }
 
-     private static void allMatch(List<Person> list) {
+    private static void allMatch(List<Person> list) {
         System.out.println("*********** allMatch ***********");
 
         //allMatch checks if EVERYONE in the list, collection etc.. is equals something
-         boolean result = list.stream()
-                 .allMatch(person -> person.getNationality().equals("USA"));
-         System.out.println(result);
+        boolean result = list.stream()
+                .allMatch(person -> person.getNationality().equals("USA"));
+        System.out.println(result);
+    }
+
+    private static void anyMatch(List<Person> list) {
+        System.out.println("********** Any Match **********");
+
+        //this is almost the same as allMatch, but it has a big diff, just needs to has one, not everyone!
+        boolean result = list.stream()
+                .anyMatch(person -> person.getNationality().equals("USA"));
+        System.out.println(result);
     }
 }
