@@ -15,7 +15,10 @@ public class FinalOperationsWithStreams {
 
         forEach(list);
         count(list);
+        allMatch(list);
     }
+
+
 
     private static void forEach(List<Person> list) {
         System.out.println("********** for Each **********");
@@ -55,4 +58,13 @@ public class FinalOperationsWithStreams {
                 .count();
         System.out.println(count);
      }
+
+     private static void allMatch(List<Person> list) {
+        System.out.println("*********** allMatch ***********");
+
+        //allMatch checks if EVERYONE in the list, collection etc.. is equals something
+         boolean result = list.stream()
+                 .allMatch(person -> person.getNationality().equals("USA"));
+         System.out.println(result);
+    }
 }
