@@ -122,5 +122,12 @@ public class FinalOperationsWithStreams {
                 .filter(person -> person.getNationality().equals("Brazil"))
                 .collect(Collectors.toMap(Person::getAge, Person::new));
         map.forEach((k,v) -> System.out.println(k + " / " + v));
+
+        System.out.println("----- grouping by age -----");
+        Map<Integer, List<Person>> ageGroup = list.stream()
+                .distinct()
+                .collect(Collectors.groupingBy(Person::getAge));
+         ageGroup.forEach((k,v) -> System.out.println(k + " / " + v));
+
     }
 }
