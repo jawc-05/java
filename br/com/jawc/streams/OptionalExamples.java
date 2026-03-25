@@ -21,6 +21,11 @@ public class OptionalExamples {
             System.out.println("Max age: " + optional.get());
         }
 
-
+        System.out.println("----- YOUNGEST PERSON -----");
+        Optional<Person> optionalMin = list.stream()
+                .min(Comparator.comparing(Person::getAge));
+        if (optionalMin.isPresent()){
+            System.out.println("Min age: " + optionalMin.get());
+        }
     }
 }
