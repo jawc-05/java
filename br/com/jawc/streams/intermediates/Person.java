@@ -43,6 +43,12 @@ public class Person {
         return name;
     }
 
+
+    //A method that is just used to get the initialName from every person name
+    public String getNameInitial(){
+        return name.substring(0,1);
+    }
+
     public void setName(String name) {
         this.name = name;
     }

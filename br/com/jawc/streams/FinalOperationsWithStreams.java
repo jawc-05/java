@@ -135,5 +135,10 @@ public class FinalOperationsWithStreams {
                 .collect(Collectors.groupingBy(Person::getNationality));
         natioGroup.forEach((k,v) -> System.out.println(k + " / " + v));
 
+        System.out.println("----- grouping by initial from the name -----");
+        Map<String, List<Person>> initalName = list.stream()
+                .distinct()
+                .collect(Collectors.groupingBy(Person::getNameInitial));
+        initalName.forEach((k,v) -> System.out.println(k + " / " + v));
     }
 }
