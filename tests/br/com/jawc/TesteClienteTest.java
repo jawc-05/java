@@ -2,7 +2,7 @@ package br.com.jawc;
 
 import org.junit.Assert;
 import org.junit.Test;
-import tests.TesteCliente;
+import br.com.jawc.tests.TesteCliente;
 
 public class TesteClienteTest {
 

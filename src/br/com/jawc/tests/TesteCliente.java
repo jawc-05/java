@@ -1,7 +1,7 @@
 /**
  * @author jawc
  */
-package tests;
+package br.com.jawc.tests;
 
 public class TesteCliente {
 
