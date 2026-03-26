@@ -3,6 +3,7 @@
  */
 package br.com.jawc.streams.genereExample;
 
+import java.util.Collection;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -11,6 +12,17 @@ public class App {
     public static void main(String[] args) {
         List<Person> list = new Person().addingPersons();
 
+        checkWomen(list);
+
+        System.out.println("***** LISTA COM APENAS OS HOMEMS *****");
+        List<Person> homens = list.stream()
+                .filter(person -> person.getSex().equals("Homem"))
+                .collect(Collectors.toList());
+        homens.forEach(System.out::println);
+
+    }
+
+    public static Collection<Person> checkWomen(List<Person> list){
         list.stream()
                 .forEach(System.out::println);
 
@@ -20,11 +32,6 @@ public class App {
                 .collect(Collectors.toList());
         mulheres.forEach(System.out::println);
 
-        System.out.println("***** LISTA COM APENAS OS HOMEMS *****");
-        List<Person> homens = list.stream()
-                .filter(person -> person.getSex().equals("Homem"))
-                .collect(Collectors.toList());
-        homens.forEach(System.out::println);
-
+        return mulheres;
     }
 }
