@@ -4,10 +4,11 @@
 package br.com.jawc.mock.service;
 
 import br.com.jawc.mock.dao.ClienteDao;
+import br.com.jawc.mock.dao.IClienteDAO;
 
 public class ClienteService {
 
-    private ClienteDao clienteDao;
+    private IClienteDAO clienteDao;
 
     public ClienteService(){
         clienteDao = new ClienteDao();
