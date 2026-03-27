@@ -69,5 +69,11 @@ public class ContractServiceTest {
         Assert.assertEquals("Atualizado!", re);
     }
 
-    @
+    @Test(expected=UnsupportedOperationException.class)
+    public void expectedErrorUpdatingTest(){
+        IContractDAO dao = new ContractDAO();
+        IContractService service = new ContractService(dao);
+        String re = service.update();
+        Assert.assertEquals("Atualizado!", re);
+    }
 }

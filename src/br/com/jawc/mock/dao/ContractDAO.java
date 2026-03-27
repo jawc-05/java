@@ -20,6 +20,6 @@ public class ContractDAO implements IContractDAO {
 
     @Override
     public void update() {
-
+        throw new UnsupportedOperationException("Not supported with the db yet");
     }
 }
