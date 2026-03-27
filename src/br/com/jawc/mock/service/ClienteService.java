@@ -10,8 +10,8 @@ public class ClienteService {
 
     private IClienteDAO clienteDao;
 
-    public ClienteService(){
-        clienteDao = new ClienteDao();
+    public ClienteService(IClienteDAO clienteDao){
+        this.clienteDao = clienteDao;
     }
 
     public String salvar(){
