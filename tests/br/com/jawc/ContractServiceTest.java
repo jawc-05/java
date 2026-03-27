@@ -52,4 +52,12 @@ public class ContractServiceTest {
         String re =  service.search();
         Assert.assertEquals("Encontrado!", re);
     }
+
+    @Test(expected=UnsupportedOperationException.class)
+    public void expectErrorSearchingTest(){
+        IContractDAO dao = new ContractDAO();
+        IContractService service = new ContractService(dao);
+        String re = service.search();
+        Assert.assertEquals("Encontrado!", re);
+    }
 }
