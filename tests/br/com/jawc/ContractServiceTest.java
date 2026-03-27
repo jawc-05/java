@@ -44,4 +44,12 @@ public class ContractServiceTest {
         String re = service.delete();
         Assert.assertEquals("Deletado!", re);
     }
+
+    @Test
+    public void searchTest(){
+        IContractDAO dao = new ContractDAOMock();
+        IContractService service = new ContractService(dao);
+        String re =  service.search();
+        Assert.assertEquals("Encontrado!", re);
+    }
 }

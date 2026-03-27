@@ -15,4 +15,9 @@ public class ContractDAOMock implements IContractDAO {
     public void delete() {
 
     }
+
+    @Override
+    public void search() {
+
+    }
 }

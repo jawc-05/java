@@ -12,4 +12,9 @@ public class ContractDAO implements IContractDAO {
     public void delete() {
         throw new UnsupportedOperationException("Not supported with the  db yet.");
     }
+
+    @Override
+    public void search() {
+        throw new UnsupportedOperationException("Not supported with the db yet");
+    }
 }

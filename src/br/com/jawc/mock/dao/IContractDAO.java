@@ -7,4 +7,6 @@ public interface IContractDAO {
     void save();
 
     void delete();
+
+    void search();
 }

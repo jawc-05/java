@@ -8,4 +8,6 @@ public interface IContractService {
     String save();
 
     String delete();
+
+    String search();
 }

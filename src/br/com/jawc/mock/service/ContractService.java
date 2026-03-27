@@ -24,4 +24,10 @@ public class ContractService implements IContractService {
         contractDao.delete();
         return "Deletado!";
     }
+
+    @Override
+    public String search() {
+        contractDao.search();
+        return "Encontrado!";
+    }
 }
