@@ -4,7 +4,7 @@
 package br.com.jawc;
 
 import br.com.jawc.mock.dao.ClienteDao;
-import br.com.jawc.mock.dao.ClienteDaoMock;
+import br.com.jawc.mock.dao.mocks.ClienteDaoMock;
 import br.com.jawc.mock.dao.IClienteDAO;
 import br.com.jawc.mock.service.ClienteService;
 import org.junit.Assert;
