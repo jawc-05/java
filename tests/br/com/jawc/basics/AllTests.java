@@ -1,4 +1,4 @@
-package br.com.jawc;
+package br.com.jawc.basics;
 
 import org.junit.runner.RunWith;
 import org.junit.runners.Suite;

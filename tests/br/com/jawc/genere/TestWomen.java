@@ -1,7 +1,7 @@
 /**
  * @author jawc
  */
-package br.com.jawc;
+package br.com.jawc.genere;
 
 import br.com.jawc.streams.genereExample.App;
 import br.com.jawc.streams.genereExample.Person;
@@ -9,7 +9,6 @@ import org.junit.Assert;
 import org.junit.Test;
 
 import java.util.Collection;
-import java.util.LinkedList;
 import java.util.List;
 
 public class TestWomen {

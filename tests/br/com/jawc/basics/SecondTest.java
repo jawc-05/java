@@ -1,4 +1,4 @@
-package br.com.jawc;
+package br.com.jawc.basics;
 
 import org.junit.Assert;
 import org.junit.Test;

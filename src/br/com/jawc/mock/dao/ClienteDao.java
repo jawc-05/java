@@ -6,6 +6,6 @@ package br.com.jawc.mock.dao;
 public class ClienteDao {
 
     public String salvar(){
-        return "Sucesso!";
+        throw new UnsupportedOperationException("Need to configure the database before saving");
     }
 }
