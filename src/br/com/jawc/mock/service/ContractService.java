@@ -18,4 +18,10 @@ public class ContractService implements IContractService {
         contractDao.save();
         return "Sucesso!";
     }
+
+    @Override
+    public String delete() {
+        contractDao.delete();
+        return "Deletado!";
+    }
 }
