@@ -28,4 +28,12 @@ public class ContractServiceTest {
         String re = service.save();
         Assert.assertEquals("Sucesso!", re);
     }
+
+    @Test
+    public void deleteTest(){
+        IContractDAO dao = new ContractDAOMock();
+        IContractService service = new ContractService(dao);
+        String re = service.delete();
+        Assert.assertEquals("Deletado!", re);
+    }
 }
