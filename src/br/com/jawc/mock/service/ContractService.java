@@ -30,4 +30,10 @@ public class ContractService implements IContractService {
         contractDao.search();
         return "Encontrado!";
     }
+
+    @Override
+    public String update() {
+        contractDao.update();
+        return "Atualizado!";
+    }
 }

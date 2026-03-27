@@ -17,4 +17,9 @@ public class ContractDAO implements IContractDAO {
     public void search() {
         throw new UnsupportedOperationException("Not supported with the db yet");
     }
+
+    @Override
+    public void update() {
+
+    }
 }

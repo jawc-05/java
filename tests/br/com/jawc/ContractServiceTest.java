@@ -60,4 +60,14 @@ public class ContractServiceTest {
         String re = service.search();
         Assert.assertEquals("Encontrado!", re);
     }
+
+    @Test
+    public void updateTest(){
+        IContractDAO dao = new ContractDAOMock();
+        IContractService service = new ContractService(dao);
+        String re = service.update();
+        Assert.assertEquals("Atualizado!", re);
+    }
+
+    @
 }

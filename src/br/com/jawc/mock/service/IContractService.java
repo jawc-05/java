@@ -10,4 +10,6 @@ public interface IContractService {
     String delete();
 
     String search();
+
+    String update();
 }

@@ -20,4 +20,6 @@ public class ContractDAOMock implements IContractDAO {
     public void search() {
 
     }
+    @Override
+    public void update() {}
 }

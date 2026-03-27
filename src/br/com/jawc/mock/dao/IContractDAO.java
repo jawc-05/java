@@ -9,4 +9,6 @@ public interface IContractDAO {
     void delete();
 
     void search();
+
+    void update();
 }
